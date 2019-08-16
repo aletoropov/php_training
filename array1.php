@@ -11,3 +11,12 @@ for ($i = 0; $i < count($arr); $i++) {
         echo $arr[$i][$j] . '<br>';
     }
 }
+
+unset($arr);
+
+//ассоциативный массив.
+$arr = [['name' => 'Alex', 'age' => '29'], ['name' => 'Ivan', 'age' => '30']];
+
+for($i = 0; $i < count($arr); $i++) {
+    echo 'Name: ' . $arr[$i]['name'] . ' Age: ' . $arr[$i]['age'] . '<br>';
+}
