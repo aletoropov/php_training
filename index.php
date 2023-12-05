@@ -6,7 +6,7 @@
  * @author AlexandToropov
  */
 
-$ignore_files = ['.', '..', '.git', '.gitignore', 'image.php'];
+$ignore_files = ['.', '..', '.git', '.gitignore', 'image.php', '.idea', 'README.md'];
 
 $files = scandir('.');
 
