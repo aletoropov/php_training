@@ -14,9 +14,19 @@ for ($i = 0; $i < count($arr); $i++) {
 
 unset($arr);
 
-//ассоциативный массив.
+/**
+ * Ассоциативный массив.
+ */
 $arr = [['name' => 'Alex', 'age' => '29'], ['name' => 'Ivan', 'age' => '30']];
 
 for($i = 0; $i < count($arr); $i++) {
     echo 'Name: ' . $arr[$i]['name'] . ' Age: ' . $arr[$i]['age'] . '<br>';
 }
+
+/**
+ * Удаляем пустые элементы из массива
+ */
+$products = ['apple', 'kiwi', '', 'banana', ''];
+var_dump($products);
+$products = array_diff($products, ['']);
+var_dump($products);
