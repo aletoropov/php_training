@@ -16,10 +16,10 @@ if (isset($_FILES['upfile'])) {
 
 if ($error_code == 0) {
     //выводим информацию о файле.
-    echo 'Имя файла на сервере: ' . $upfile . '<br>';
-    echo 'Имя файла на компьютере пользователя: ' . $upfile_name . '<br>';
-    echo 'Размер файла: ' . $upfile_size . '<br>';
-    echo 'MIME тип файла: ' . $upfile_type . '<br>';
+    echo 'Имя файла на сервере: ' . htmlspecialchars($upfile) . '<br>';
+    echo 'Имя файла на компьютере пользователя: ' . htmlspecialchars($upfile_name) . '<br>';
+    echo 'Размер файла: ' . htmlspecialchars($upfile_size) . '<br>';
+    echo 'MIME тип файла: ' . htmlspecialchars($upfile_type) . '<br>';
 
     //дополняем имя файла.
     $upfile_name = $dir . $upfile_name;
