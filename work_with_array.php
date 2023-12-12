@@ -30,3 +30,13 @@ $products = ['apple', 'kiwi', '', 'banana', ''];
 var_dump($products);
 $products = array_diff($products, ['']);
 var_dump($products);
+
+/**
+ * Преобразовываем массив в JSON и обратно
+ */
+$cars = ['model' => 'audi', 'year' => 2023, 'speed' => 240];
+$cars_json = json_encode($cars);
+var_dump($cars_json);
+
+$cars_array = json_decode($cars_json, true);
+var_dump($cars_array);
