@@ -1,6 +1,18 @@
 <?php
 
 /**
+ * Функция для вывода отладочной информации в отформатированном виде
+ * @param $data
+ * @return void
+ */
+function debug($data): void
+{
+    echo '<pre>';
+    var_dump($data);
+    echo '</pre>';
+}
+
+/**
  * Обход в цикле вложенных массивов.
  */
 
@@ -40,3 +52,11 @@ var_dump($cars_json);
 
 $cars_array = json_decode($cars_json, true);
 var_dump($cars_array);
+
+/**
+ * Объединение массивов
+ */
+$fruit = ['apple', 'lemon', 'banana'];
+$vegetables = ['potato', 'cucumber', 'tomato'];
+$food = array_merge($fruit, $vegetables);
+debug($food);
