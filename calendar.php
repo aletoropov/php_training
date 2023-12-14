@@ -10,7 +10,7 @@
  $name_month .= ' - ' . date('Y'); //добавляем год к названию месяца
  $current_num_day = date('j'); //текущий день в месяце
  $sum_days_of_month = date('t'); //количество дней в месяце
- $firt_day_of_week = date('w', strtotime(date('Y-m-') . '01'));
+ $first_day_of_week = date('w', strtotime(date('Y-m-') . '01'));
 
  ?>
 
@@ -26,7 +26,7 @@
      <table style="border: 2px solid #f9f9f9;">
         <tr>
             <th cols="7">
-                <b><?=$name_month?></b>
+                <b><?=htmlspecialchars($name_month)?></b>
             </th>
         </tr>
         <tr>
@@ -41,7 +41,7 @@
         <tr>
             <?php 
             $j = 0;
-            while ($j < ($firt_day_of_week-1)) {
+            while ($j < ($first_day_of_week-1)) {
                 echo '<td></td>' . PHP_EOL;
                 $j++;
             }    
