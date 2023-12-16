@@ -24,11 +24,11 @@ class Singleton
 
     private function __wakeup() {}
 
-    
+
     /**
      * Создаем объект класса и возвращаем его.
      *
-     * @return object
+     * @return Singleton
      */
     public static function getInstance(): Singleton
     {
