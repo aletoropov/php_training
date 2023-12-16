@@ -30,7 +30,7 @@ class Singleton
      *
      * @return object
      */
-    public static function getInstance()
+    public static function getInstance(): Singleton
     {
         if (self::$self == null) {
             self::$self = new Singleton();
