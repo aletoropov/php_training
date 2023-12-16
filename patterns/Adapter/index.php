@@ -6,10 +6,10 @@
  * другой предоставляет несовместимый с первым интерфейс.
  */
 
- require_once('I_VkAdapter.php');
- require_once('VkApi1.php');
- require_once('VkApiNew.php');
- require_once('VkAdapter.php');
+ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'I_VkAdapter.php');
+ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'VkApi1.php');
+ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'VkApiNew.php');
+ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'VkAdapter.php');
 
  $vk_adapter = new VkAdapter(new VkApiNew);
  $vk_adapter->postOnWall('Hello world!');
