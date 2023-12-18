@@ -14,8 +14,8 @@ class Captcha
     const BG_LENGHT = 20;
     const FONTS = __DIR__ . DIRECTORY_SEPARATOR . 'fonts' . DIRECTORY_SEPARATOR . 'font.ttf';
 
-    private static $letters = ['2', '3', '3', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'c', 'w', 'x', 'z'];
-    private static $colors = ['90', '110', '140', '170', '200', '220'];
+    private static array $letters = ['2', '3', '3', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'c', 'w', 'x', 'z'];
+    private static array $colors = ['90', '110', '140', '170', '200', '220'];
 
     /**
      * Генерирует картинку капчи.
@@ -69,7 +69,7 @@ class Captcha
      * @param $code
      * @return bool
      */
-    public static function check($code)
+    public static function check($code): bool
     {
         if (!session_id()) {
             session_start();
