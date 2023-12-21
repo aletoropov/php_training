@@ -60,3 +60,17 @@ $fruit = ['apple', 'lemon', 'banana'];
 $vegetables = ['potato', 'cucumber', 'tomato'];
 $food = array_merge($fruit, $vegetables);
 debug($food);
+
+//сортировка элментов
+$numbers = [11, 23, 2, 7, 18, 39, 45, 229, 8,];
+
+sort($numbers);
+debug($numbers);
+
+rsort($numbers);
+debug($numbers);
+
+usort($numbers, function($a, $b) {
+    return $a <=> $b;
+});
+debug($numbers);
