@@ -4,7 +4,7 @@
  *
  * @author Toropov Alexandr <toropovsite@yandex.ru>
  */
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'captcha.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'Captcha.php';
 
 ?>
 
