@@ -25,5 +25,9 @@ if ($errorCode == 0) {
     $uploadFileName = $uploadDir . $uploadFileName;
 
     //перемещаем загруженный файл.
-    move_uploaded_file($uploadFile, $uploadFileName);
+    if (move_uploaded_file($uploadFile, $uploadFileName)) {
+        echo 'Файл загружен!';
+    } else {
+        echo $errorCode;
+    }
 }
