@@ -74,3 +74,30 @@ usort($numbers, function($a, $b) {
     return $a <=> $b;
 });
 debug($numbers);
+
+/**
+ * Вывести имя подмассива.
+ * Обход вложенного массива.
+ */
+$massive = [
+    'submassive1'=>[
+        'key1'=>'name1',
+        'key2'=>'name2',
+    ],
+    'submassive2'=>[
+        'key1'=>'name3',
+        'key2'=>'name4',
+    ],
+    'submassive3'=>[
+        'key1'=>'name5',
+        'key2'=>'name6',
+    ],
+];
+
+foreach ($massive as $key => $podmassive) {
+    echo '<p>' . $key . '</p>'; // выведет submassive1 и т.д.
+    //а дальше выводим ключ и значение во вроженном массиве
+    foreach ($podmassive as $k => $v) {
+        echo $k . ' = ' . $v . '</p>' ;
+    }
+}
