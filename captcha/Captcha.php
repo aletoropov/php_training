@@ -10,8 +10,8 @@ class Captcha
     const WIDTH = 100;
     const HEIGHT = 50;
     const FONTSIZE = 14;
-    const LENGHT = 4;
-    const BG_LENGHT = 20;
+    const LENGTH = 4;
+    const BG_LENGTH = 20;
     const FONTS = __DIR__ . DIRECTORY_SEPARATOR . 'fonts' . DIRECTORY_SEPARATOR . 'font.ttf';
 
     private static array $letters = ['2', '3', '3', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'c', 'w', 'x', 'z'];
@@ -31,7 +31,7 @@ class Captcha
         imagefill($img, 0, 0, $bg);
 
         //рисуем вспомогательные символы, для шума.
-        for ($i = 0; $i < self::BG_LENGHT; $i++) {
+        for ($i = 0; $i < self::BG_LENGTH; $i++) {
             $color = imagecolorallocatealpha($img, mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255), 100);
             $letter = self::$letters[rand(0, count(self::$letters)-1)];
             $size = mt_rand(self::FONTSIZE - 4, self::FONTSIZE + 2);
@@ -42,7 +42,7 @@ class Captcha
         $secure_code = ''; //здесь будем хранить код с картинки.
 
         //рисуем основные символы
-        for ($i = 0; $i < self::LENGHT; $i++) {
+        for ($i = 0; $i < self::LENGTH; $i++) {
             $color = imagecolorallocate($img, self::$colors[mt_rand(0, count(self::$colors) - 1)],
                                               self::$colors[mt_rand(0, count(self::$colors) - 1)],
                                               self::$colors[mt_rand(0, count(self::$colors) - 1)]);
