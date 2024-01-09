@@ -3,10 +3,9 @@
  * Client
  */
 
-require __DIR__ . DIRECTORY_SEPARATOR . 'IExpression.php';
-require __DIR__ . DIRECTORY_SEPARATOR . 'DivExpression.php';
-require __DIR__ . DIRECTORY_SEPARATOR . 'OrExpression.php';
-require __DIR__ . DIRECTORY_SEPARATOR . 'AndExpression.php';
+spl_autoload_register(static function ($class_name) {
+   require __DIR__ . DIRECTORY_SEPARATOR . $class_name . '.php';
+});
 
 $divExp5 = new DivExpression(5);
 $divExp7 = new DivExpression(7);
