@@ -1,12 +1,12 @@
 <?php
 
-include('I_Pay.php');
-include 'Offline.php';
-include 'Online.php';
+spl_autoload_register(static function ($class_name) {
+    require __DIR__ . DIRECTORY_SEPARATOR . $class_name . '.php';
+});
 
 class Shop
 {
-    public function cardPay($sum) 
+    public function cardPay($sum): void
     {
         if ($sum <= 5000) {
             $payment = new Offline();
