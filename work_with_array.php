@@ -101,3 +101,15 @@ foreach ($massive as $key => $podmassive) {
         echo $k . ' = ' . $v . '</p>' ;
     }
 }
+
+/**
+ * Обход массива
+ */
+
+$num = [2, 3, 5, 7, 9, 11, 12, 15];
+$str = "";
+foreach ($num as $val) {
+    $str .= ($str == "" ? "" : "; ") . $val;
+}
+
+echo $str;
