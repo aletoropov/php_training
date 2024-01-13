@@ -6,7 +6,13 @@
  * @author Alexandr Toropov <toropovsite@yandex.ru>
  */
 
- function pal($word) {
+/**
+ * Функция проверки слова на палиндром 
+ * 
+ * @param string $word
+ * @return bool
+ */
+ function isPalindrome(string $word): bool {
      if (strlen($word) <= 1) {
          return false;
      }
@@ -19,7 +25,7 @@
      $w = substr($w, 1);
 
      $res = true;
-     if ((!pal($w)) && (strlen($w) != 0)) {
+     if ((!isPalindrome($w)) && (strlen($w) != 0)) {
          $res = false;
      }  
      return $res;
@@ -28,7 +34,7 @@
  
  $str = "abgrrgba";
 
- if (pal($str)) {
+ if (isPalindrome($str)) {
      echo $str. ' - палиндром!<br>';
  } else {
      echo $str. ' - не палиндром!<br>';
@@ -36,7 +42,7 @@
 
  $str2 = "afszpovsfa";
 
- if (pal($str2)) {
+ if (isPalindrome($str2)) {
      echo $str2 . ' - палиндром!<br>';
  } else {
      echo $str2 . ' - не палиндром!<br>';
@@ -44,7 +50,7 @@
 
  $str3 = "bb";
 
- if (pal($str3)) {
+ if (isPalindrome($str3)) {
      echo $str3 . ' - палиндром!<br>';
  } else {
      echo $str3 . ' - не палиндром!<br>';
