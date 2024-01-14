@@ -48,10 +48,38 @@
      echo $str2 . ' - не палиндром!<br>';
  }
 
- $str3 = "bb";
+/**
+ * Функция для проверки слова на палиндром
+ *
+ * @param string $word
+ * @return bool
+ */
+ function isPalindrome2(string $word): bool
+ {
+     $word = strtolower($word); //преобразуем слово в нижний регистр
+     $word = str_replace(' ', '', $word); //удаляем пробелы из слова
 
- if (isPalindrome($str3)) {
-     echo $str3 . ' - палиндром!<br>';
+     $reversed_word = strrev($word);
+
+     if ($word == $reversed_word) {
+         return true;
+     } else {
+         return false;
+     }
+ }
+
+ $str3 = 'radar';
+
+ if (isPalindrome2($str3)) {
+     echo $str3 . ' - палиндром! <br>';
  } else {
      echo $str3 . ' - не палиндром!<br>';
  }
+
+$str4 = 'arbuz';
+
+if (isPalindrome2($str4)) {
+    echo $str4 . ' - палиндром! <br>';
+} else {
+    echo $str4 . ' - не палиндром!<br>';
+}
