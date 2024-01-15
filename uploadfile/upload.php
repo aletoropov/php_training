@@ -12,6 +12,7 @@ if (isset($_FILES['uploadFile'])) {
     $uploadFileSize  = $_FILES['uploadFile']['size'];
     $uploadFileType  = $_FILES['uploadFile']['type'];
     $errorCode       = $_FILES['uploadFile']['error'];
+    $fileInfo        = pathinfo($_FILES['uploadFile']['name']);
 }
 
 if ($errorCode == 0) {
@@ -21,8 +22,8 @@ if ($errorCode == 0) {
     echo 'Размер файла: ' . htmlspecialchars($uploadFileSize) . '<br>';
     echo 'MIME тип файла: ' . htmlspecialchars($uploadFileType) . '<br>';
 
-    //дополняем имя файла.
-    $uploadFileName = $uploadDir . $uploadFileName;
+    //дополняем и генерируем уникальное имя файла.
+    $uploadFileName = $uploadDir . uniqid('upload_') . '.' . $fileInfo['extension'];
 
     //перемещаем загруженный файл.
     if (move_uploaded_file($uploadFile, $uploadFileName)) {
