@@ -23,7 +23,10 @@ if ($errorCode == 0) {
     echo 'MIME тип файла: ' . htmlspecialchars($uploadFileType) . '<br>';
 
     //дополняем и генерируем уникальное имя файла.
-    $uploadFileName = $uploadDir . uniqid('upload_') . '.' . $fileInfo['extension'];
+    do {
+        $uploadFileName = $uploadDir . uniqid('upload_') . '.' . $fileInfo['extension'];
+    } while(file_exists($uploadFileName));
+
 
     //перемещаем загруженный файл.
     if (move_uploaded_file($uploadFile, $uploadFileName)) {
