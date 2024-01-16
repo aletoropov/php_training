@@ -2,6 +2,8 @@
 
 /**
  * Скрипт загрузки одного файла на сервер.
+ *
+ * @author Александр Торопов <toropovsite@yandex.ru>
  */
 
 $uploadDir = '.' .  DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR;
@@ -26,7 +28,6 @@ if ($errorCode == 0) {
     do {
         $uploadFileName = $uploadDir . uniqid('upload_') . '.' . $fileInfo['extension'];
     } while(file_exists($uploadFileName));
-
 
     //перемещаем загруженный файл.
     if (move_uploaded_file($uploadFile, $uploadFileName)) {
