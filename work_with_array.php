@@ -113,3 +113,11 @@ foreach ($num as $val) {
 }
 
 echo $str;
+
+/**
+ * Поиск элемента массива
+ */
+
+$animals = ['cat', 'dog', 'leon'];
+$contain = in_array('leon', $animals);
+echo $contain ? "leon is here" : "leon is not";
