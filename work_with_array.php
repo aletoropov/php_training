@@ -95,8 +95,7 @@ $massive = [
 ];
 
 foreach ($massive as $key => $podmassive) {
-    echo '<p>' . $key . '</p>'; // выведет submassive1 и т.д.
-    //а дальше выводим ключ и значение во вроженном массиве
+    echo '<p>' . $key . '</p>';
     foreach ($podmassive as $k => $v) {
         echo $k . ' = ' . $v . '</p>' ;
     }
@@ -105,7 +104,6 @@ foreach ($massive as $key => $podmassive) {
 /**
  * Обход массива
  */
-
 $num = [2, 3, 5, 7, 9, 11, 12, 15];
 $str = "";
 foreach ($num as $val) {
@@ -117,7 +115,15 @@ echo $str;
 /**
  * Поиск элемента массива
  */
-
 $animals = ['cat', 'dog', 'leon'];
 $contain = in_array('leon', $animals);
 echo $contain ? "leon is here" : "leon is not";
+
+/**
+ * Получение части массива
+ */
+$numbers = [2, 4, 5, 6, 7, 11, 12, 23, 34];
+$first_numbers = array_slice($numbers, 0, 3);
+$last_numbers = array_slice($numbers, count($numbers) - 4, count($numbers));
+debug($first_numbers);
+debug($last_numbers);
