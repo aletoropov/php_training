@@ -127,3 +127,11 @@ $first_numbers = array_slice($numbers, 0, 3);
 $last_numbers = array_slice($numbers, count($numbers) - 4, count($numbers));
 debug($first_numbers);
 debug($last_numbers);
+
+/**
+ * Получение Минимального и Максимального значения
+ */
+$min = min($numbers);
+$max = max($numbers);
+echo '<p>Минимальное число: ' .  $min . '</p>';
+echo '<p>Максимальное число: ' .  $max. '</p>';
