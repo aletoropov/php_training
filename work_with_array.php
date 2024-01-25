@@ -135,3 +135,10 @@ $min = min($numbers);
 $max = max($numbers);
 echo '<p>Минимальное число: ' .  $min . '</p>';
 echo '<p>Максимальное число: ' .  $max. '</p>';
+
+/**
+ * Получение уникальных значений
+ */
+$numbers = [1, 2, 1, 2, 3, 3, 4, 5,];
+$unique = array_unique($numbers);
+debug($unique);
