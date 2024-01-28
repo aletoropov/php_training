@@ -142,3 +142,10 @@ echo '<p>Максимальное число: ' .  $max. '</p>';
 $numbers = [1, 2, 1, 2, 3, 3, 4, 5,];
 $unique = array_unique($numbers);
 debug($unique);
+
+/**
+ * Преобразование массива
+ */
+$numbers = [2, 4, 5, 6, 7, 8, 9, 11,];
+$numbers2 = array_map(function ($n) { return $n * 2; }, $numbers);
+debug($numbers2);
