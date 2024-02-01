@@ -149,3 +149,9 @@ debug($unique);
 $numbers = [2, 4, 5, 6, 7, 8, 9, 11,];
 $numbers2 = array_map(function ($n) { return $n * 2; }, $numbers);
 debug($numbers2);
+
+/**
+ *  Разбивка массива на части
+ */
+
+debug(array_chunk($numbers, 3));
