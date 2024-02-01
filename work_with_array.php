@@ -153,5 +153,4 @@ debug($numbers2);
 /**
  *  Разбивка массива на части
  */
-
 debug(array_chunk($numbers, 3));
