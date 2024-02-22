@@ -8,7 +8,7 @@
     <title>Отправка данных с помощью AJAX запроса</title>
 </head>
 <body>
-    <form name="send_form" method="post" action="handler.php">
+    <form id="feed_form" name="send_form" method="post" action="handler.php">
         <div>
             <label>
                 <input name="name" type="text">
