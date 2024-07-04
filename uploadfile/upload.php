@@ -8,6 +8,10 @@
 
 $uploadDir = '.' .  DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR;
 
+if (!is_dir($uploadDir)) {
+    mkdir($uploadDir, 0777, true);
+}
+
 if (isset($_FILES['uploadFile'])) {
     $uploadFile      = $_FILES['uploadFile']['tmp_name'];
     $uploadFileName  = $_FILES['uploadFile']['name'];
