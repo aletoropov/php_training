@@ -89,6 +89,7 @@ class Captcha
     /**
      * Проверка кода CAPTCHA
      *
+     *
      * @param $code
      * @return bool
      */
