@@ -7,18 +7,41 @@
 
 class Captcha
 {
+    /**
+     * Ширина картинки CAPTCHA
+     */
     const WIDTH = 100;
+
+    /**
+     * Высота картинки CAPTCHA
+     */
     const HEIGHT = 50;
+
+    /**
+     * Размер шрифта на CAPTCHA
+     */
     const FONTSIZE = 14;
+
+    /**
+     * Количество символом на CAPTCHA
+     */
     const LENGTH = 4;
+
+    /**
+     * Длина фоновых линий
+     */
     const BG_LENGTH = 20;
+
+    /**
+     * Шрифт используемый для текста CAPTCHA
+     */
     const FONTS = __DIR__ . DIRECTORY_SEPARATOR . 'fonts' . DIRECTORY_SEPARATOR . 'font.ttf';
 
     private static array $letters = ['2', '3', '3', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'c', 'w', 'x', 'z'];
     private static array $colors = ['90', '110', '140', '170', '200', '220'];
 
     /**
-     * Генерирует картинку капчи.
+     * Генерирует картинку CAPTCHA.
      */
     public static function generate()
     {
@@ -64,7 +87,7 @@ class Captcha
     }
 
     /**
-     * Проверка кода капчи
+     * Проверка кода CAPTCHA
      *
      * @param $code
      * @return bool
