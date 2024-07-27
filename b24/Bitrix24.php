@@ -4,7 +4,7 @@ namespace b24;
 
 class Bitrix24
 {
-    public function addLead(string $queryURL, array $queryData)
+    public function addLead(string $queryURL, string $queryData)
     {
         // Отправляем запрос в Битрикс24 и обрабатываем ответ
         $curl = curl_init();
