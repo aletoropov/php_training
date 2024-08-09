@@ -37,8 +37,15 @@ class Captcha
      */
     const FONTS = __DIR__ . DIRECTORY_SEPARATOR . 'fonts' . DIRECTORY_SEPARATOR . 'font.ttf';
 
+    /**
+     * @var array|string[] $letters
+     */
     private static array $letters = ['2', '3', '3', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'c', 'w', 'x', 'z'];
-    private static array $colors = ['90', '110', '140', '170', '200', '220'];
+
+    /**
+     * @var array|int[] $colors
+     */
+    private static array $colors = [90, 110, 140, 170, 200, 220];
 
     /**
      * Генерирует картинку CAPTCHA.
@@ -88,7 +95,6 @@ class Captcha
 
     /**
      * Проверка кода CAPTCHA
-     *
      *
      * @param $code
      * @return bool
