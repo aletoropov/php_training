@@ -1,6 +1,6 @@
 <?php
 
-use b24\Bitrix24;
+use CRM\b24\Bitrix24;
 
 require __DIR__ . '/Bitrix24.php';
 

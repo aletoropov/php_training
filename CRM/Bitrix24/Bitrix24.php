@@ -1,6 +1,6 @@
 <?php
 
-namespace b24;
+namespace CRM\b24;
 
 class Bitrix24
 {
