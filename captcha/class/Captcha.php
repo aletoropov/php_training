@@ -1,10 +1,11 @@
 <?php
+
+namespace class;
 /**
  * Class Captcha - для создания и проверки кодов
  *
  * @author Toropov Alexandr <toropovsite@yandex.ru>
  */
-
 class Captcha
 {
     /**
@@ -63,10 +64,10 @@ class Captcha
         //рисуем вспомогательные символы, для шума.
         for ($i = 0; $i < self::BG_LENGTH; $i++) {
             $color = imagecolorallocatealpha($img, mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255), 100);
-            $letter = self::$letters[rand(0, count(self::$letters)-1)];
+            $letter = self::$letters[rand(0, count(self::$letters) - 1)];
             $size = mt_rand(self::FONTSIZE - 4, self::FONTSIZE + 2);
             imagettftext($img, $size, mt_rand(0, 45), mt_rand(self::WIDTH * 0.1, self::WIDTH * 0.9),
-                         mt_rand(self::HEIGHT * 0.1, self::HEIGHT * 0.9), $color, self::FONTS, $letter);
+                mt_rand(self::HEIGHT * 0.1, self::HEIGHT * 0.9), $color, self::FONTS, $letter);
         }
 
         $secure_code = ''; //здесь будем хранить код с картинки.
@@ -74,9 +75,9 @@ class Captcha
         //рисуем основные символы
         for ($i = 0; $i < self::LENGTH; $i++) {
             $color = imagecolorallocate($img, self::$colors[mt_rand(0, count(self::$colors) - 1)],
-                                              self::$colors[mt_rand(0, count(self::$colors) - 1)],
-                                              self::$colors[mt_rand(0, count(self::$colors) - 1)]);
-            $letter = self::$letters[rand(0, count(self::$letters)-1)];
+                self::$colors[mt_rand(0, count(self::$colors) - 1)],
+                self::$colors[mt_rand(0, count(self::$colors) - 1)]);
+            $letter = self::$letters[rand(0, count(self::$letters) - 1)];
             $size = mt_rand(self::FONTSIZE * 2 - 2, self::FONTSIZE * 2 + 2);
             if (empty($x)) {
                 $x = mt_rand(5, 15);
